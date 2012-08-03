@@ -239,8 +239,7 @@ print_sparkline() {
       | sed 's/[^.0-9]//g' \
       | xargs \
       | spark`
-    echo -n ${SPARK_OUTPUT}
-    echo "  $1"
+    echo ${SPARK_OUTPUT}
 
     ## If the user wanted to see a printed URL print that as well
     if [ "${LIBRATO_SPARK_PRINT_URL}" == "TRUE" ]; then
