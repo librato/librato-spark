@@ -55,40 +55,8 @@ Run the command without any options to get a usage statement:
     $ librato-spark.bash
 
     USAGE: ./librato-spark.bash <metric> [-s source] [-d duration] [-b] [-u] [-v]
+    ...
     
-    
-    EXAMPLE: ./librato-spark.bash cpu
-    Fetch data from the metric named "cpu".
-    Do not limit the data fetched to any particular source
-    Fetch 60 minutes worth of data
-    Present the sum of all sources as a single sparkline.
-    
-    
-    EXAMPLE: ./librato-spark.bash cpu -s i-6b546b05
-    Limit the data to only measurements with source of "i-6b546b05"
-    DEFAULT: *
-    
-    
-    EXAMPLE: ./librato-spark.bash cpu -d 300
-    Fetch any available data for "cpu" from the last 50 minutes only.
-    DEFAULT: 600
-    
-    
-    EXAMPLE: ./librato-spark.bash cpu -b
-    If there are multiple sources for "cpu" print a sparkline for each one.
-    DEFAULT: Print multiple sources as a single sparkline
-    
-    
-    EXAMPLE: ./librato-spark.bash cpu -v
-    If there are multiple sources for "cpu" print a sparkline for each one.
-    DEFAULT: Print multiple sources as a single sparkline
-    
-    
-    EXAMPLE: ./librato-spark.bash cpu -u
-    Print a URL that can be loaded in a web browser for the Metric.
-    To automatically open this URL on MacOS: export LIBRATO_SPARK_URL_OPEN=true
-    DEFAULT: Do not print the URL of the Metric
-
 [api]:      http://dev.librato.com/v1/get/metrics/:name
 [brew]:     https://github.com/mxcl/homebrew    
 [spark]:    https://github.com/holman/spark

@@ -27,7 +27,7 @@ usage () {
   echo "  EXAMPLE: ${0} cpu"
   echo "  Fetch data from the metric named \"cpu\"."
   echo "  Do not limit the data fetched to any particular source"
-  echo "  Fetch 60 minutes worth of data"
+  echo "  Fetch 10 minutes worth of data"
   echo "  Present the sum of all sources as a single sparkline."
   echo
 
@@ -38,9 +38,10 @@ usage () {
   echo
 
   echo
-  echo "  EXAMPLE: ${0} cpu -d 600"
-  echo "  Fetch any available data for \"cpu\" from the last 10 minutes only."
-  echo "  DEFAULT: 3600"
+  echo "  EXAMPLE: ${0} cpu -d 300"
+  echo "  Fetch any available data for \"cpu\" from the last 300 seconds"
+  echo "  \(i.e. 5 minutes\)."
+  echo "  DEFAULT: 600"
   echo
 
   echo
