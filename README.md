@@ -8,7 +8,7 @@ Command line interface to generate sparklines of your Librato metrics
     LIBRATO_USERID="email address you registered with"
     LIBRATO_API_TOKEN="l809ejfjsdf909009237754blkoe2907708"
 
-The default behavior is to look for the last 3600 seconds, or 60 minutes worth of data and present that as a single summarized sparkline:
+The default behavior is to look for the last 600 seconds, or 10 minutes worth of data and present that as a single summarized sparkline:
 
     ./librato-spark.bash api.measures.posts.vol.total
 
@@ -37,9 +37,9 @@ Run the command without any options to get a usage statement:
     DEFAULT: *
     
     
-    EXAMPLE: ./librato-spark.bash cpu -d 600
-    Fetch any available data for "cpu" from the last 10 minutes only.
-    DEFAULT: 3600
+    EXAMPLE: ./librato-spark.bash cpu -d 300
+    Fetch any available data for "cpu" from the last 50 minutes only.
+    DEFAULT: 600
     
     
     EXAMPLE: ./librato-spark.bash cpu -b
